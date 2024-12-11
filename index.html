@@ -20,17 +20,19 @@
         <header>
             <h1>لوك بوك</h1>
             <nav>
-                <button onclick="setActiveSection('home')"><i class="fas fa-home"></i> الرئيسية</button>
-                <button onclick="setActiveSection('profile')"><i class="fas fa-user"></i> الملف الشخصي</button>
-                <button onclick="setActiveSection('settings')"><i class="fas fa-cog"></i> الإعدادات</button>
-                <button onclick="setActiveSection('aiFeatures')"><i class="fas fa-brain"></i> ميزات الذكاء الاصطناعي</button>
-                <button onclick="setActiveSection('messages')"><i class="fas fa-envelope"></i> الرسائل</button>
+                <button onclick="showSection('home')"><i class="fas fa-home"></i> الرئيسية</button>
+                <button onclick="showSection('profile')"><i class="fas fa-user"></i> الملف الشخصي</button>
+                <button onclick="showSection('settings')"><i class="fas fa-cog"></i> الإعدادات</button>
+                <button onclick="showSection('aiFeatures')"><i class="fas fa-brain"></i> ميزات الذكاء الاصطناعي</button>
+                <button onclick="showSection('messages')"><i class="fas fa-envelope"></i> الرسائل</button>
             </nav>
         </header>
         <main>
             <section id="home" class="inactive">
                 <h2>الصفحة الرئيسية</h2>
-                <div id="posts"></div>
+                <div id="posts">
+                    <!-- عرض المنشورات هنا -->
+                </div>
                 <div id="postForm">
                     <textarea id="newPost" placeholder="اكتب منشورك هنا..."></textarea>
                     <button onclick="submitPost()">نشر</button>
@@ -42,7 +44,9 @@
                     <img src="profile.jpg" alt="صورة الملف الشخصي">
                     <p>اسم المستخدم: John Doe</p>
                     <p>البريد الإلكتروني: john@example.com</p>
-                    <div id="userPosts"></div>
+                    <div id="userPosts">
+                        <!-- عرض منشورات المستخدم هنا -->
+                    </div>
                 </div>
             </section>
             <section id="settings">
@@ -61,7 +65,9 @@
                     <input type="text" id="aiInput" placeholder="اكتب ما ترغب في البحث عنه...">
                     <button onclick="searchAI()">بحث</button>
                 </div>
-                <div id="aiResults"></div>
+                <div id="aiResults">
+                    <!-- عرض نتائج الذكاء الاصطناعي هنا -->
+                </div>
             </section>
             <section id="messages">
                 <h2>الرسائل</h2>
@@ -69,7 +75,9 @@
                     <textarea id="newMessage" placeholder="اكتب رسالتك هنا..."></textarea>
                     <button onclick="sendMessage()">إرسال</button>
                 </div>
-                <div id="messageList"></div>
+                <div id="messageList">
+                    <!-- عرض الرسائل هنا -->
+                </div>
             </section>
         </main>
     </div>

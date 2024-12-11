@@ -36,9 +36,21 @@ section {
 section.active {
     display: block;
 }
-#loginPage.active { display: block; }
-#loginPage.inactive, #app.inactive { display: none; }
-#app.active { display: block; }
+#loginPage.active {
+    display: block;
+}
+#loginPage.inactive {
+    display: none;
+}
+#app.inactive {
+    display: none;
+}
+#app.active {
+    display: block;
+}
+#postForm, #messageForm, #aiForm {
+    margin-top: 20px;
+}
 textarea, input {
     width: 100%;
     padding: 10px;
@@ -73,6 +85,21 @@ button:hover {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
-.post { background-color: #e6f7ff; padding: 10px; border-radius: 5px; margin-bottom: 10px; }
-.message { background-color: #ffebcc; padding: 10px; border-radius: 5px; margin-bottom: 10px; }
-.aiResult { background-color: #f0e68c; padding: 10px; border-radius: 5px; margin-bottom: 10px; }
+.post {
+    background-color: #e6f7ff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.message {
+    background-color: #ffebcc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.aiResult {
+    background-color: #f0e68c;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
