@@ -5,18 +5,22 @@ function showSection(sectionId) {
     });
     document.getElementById(sectionId).classList.add('active');
 }
+
 function login(event) {
     event.preventDefault();
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
+    
     // بيانات الدخول الافتراضية
     if (username === "ZYAD" && password === "10102007") {
         document.getElementById('loginPage').classList.remove('active');
         document.getElementById('app').classList.add('active');
+        showSection('home'); // نقل المستخدم إلى الصفحة الرئيسية
     } else {
         alert("اسم المستخدم أو كلمة المرور غير صحيحة.");
     }
 }
+
 function submitPost() {
     const postContent = document.getElementById('newPost').value;
     if (postContent.trim() !== "") {
@@ -29,6 +33,7 @@ function submitPost() {
         alert('يرجى كتابة محتوى للمنشور.');
     }
 }
+
 function changeTheme() {
     const theme = document.getElementById('theme').value;
     if (theme === 'dark') {
@@ -39,6 +44,7 @@ function changeTheme() {
         document.body.style.color = '#333';
     }
 }
+
 function searchAI() {
     const input = document.getElementById('aiInput').value;
     if (input.trim() !== "") {
@@ -50,6 +56,7 @@ function searchAI() {
         alert('يرجى كتابة شيء للبحث عنه.');
     }
 }
+
 function sendMessage() {
     const messageContent = document.getElementById('newMessage').value;
     if (messageContent.trim() !== "") {
@@ -59,6 +66,6 @@ function sendMessage() {
         document.getElementById('messageList').appendChild(message);
         document.getElementById('newMessage').value = '';
     } else {
-        alert('يرجى كتابة محتوى.');
+        alert('يرجى كتابة محتوى للرسالة.');
     }
 }
